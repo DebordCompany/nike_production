@@ -629,11 +629,17 @@ header {
 }
 
 .footer_ayuda_acordeon {
-  padding: 1rem 0;
+  padding: 0;
+  margin: 3rem 0;
+  height: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .footer_ayuda_acordeon {
-    padding: 1rem 3rem;
+    margin: 1rem 2.5rem;
   }
 }
 
@@ -642,17 +648,18 @@ header {
   font-size: 0.8rem;
 }
 
-.footer_ayuda_acordeon_contenido {
-  display: none;
-  overflow: hidden;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
+.acordeon_activo {
+  height: 15rem;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .acordeon_activo {
+    padding: 0;
+  }
 }
 
-.acordeon_activo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.footer_ayuda_acordeon_contenido {
+  overflow: hidden;
 }
 
 .footer_ayuda_acordeon_contenido li {

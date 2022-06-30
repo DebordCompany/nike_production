@@ -16,11 +16,11 @@ var title = document.querySelectorAll("#title");
 var contenido = document.querySelectorAll("#contenido");
 var ayuda = document.querySelectorAll(".footer_ayuda_acordeon");
 
-ayuda.forEach((cadaTitle, i) => {
-  ayuda[i].addEventListener("click", () => {
-    contenido.forEach((elemento) => {
-      contenido.classList.add("acordeon_activo");
+title.forEach((elemento, i) => {
+  title[i].addEventListener("click", () => {
+    ayuda.forEach((elemento, i) => {
+      ayuda[i].classList.remove("acordeon_activo");
     });
+    ayuda[i].classList.add("acordeon_activo");
   });
 });
-console.log(contenido);
